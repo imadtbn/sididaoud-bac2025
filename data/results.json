@@ -1,0 +1,23 @@
+[
+  {
+    "year": 2025,
+    "candidates": 126,
+    "successful": 97,
+    "published": true,
+    "demo": true
+  },
+  {
+    "year": 2024,
+    "candidates": 134,
+    "successful": 104,
+    "published": true,
+    "demo": true
+  },
+  {
+    "year": 2023,
+    "candidates": 118,
+    "successful": 87,
+    "published": true,
+    "demo": true
+  }
+]
