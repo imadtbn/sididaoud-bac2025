@@ -22,7 +22,7 @@ function makeSocialLinks(){
 }
 function makeSharePreview(){
  var preview=document.createElement("div");preview.className="share-preview";preview.id="share-preview";
- var icon=document.createElement("img");icon.src=new URL("assets/icons/icon-512.png",home).href;icon.alt="شعار الثانوية";icon.width=64;icon.height=64;
+ var icon=document.createElement("img");icon.src=new URL("assets/icons/school-emblem-512.png",home).href;icon.alt="شعار الثانوية";icon.width=64;icon.height=64;
  var box=document.createElement("div");var name=document.createElement("strong");name.textContent=shareTitle;
  var desc=document.createElement("p");desc.textContent=shareDesc;box.append(name,desc);preview.append(icon,box);return preview;
 }

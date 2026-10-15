@@ -179,3 +179,22 @@ p,li,.contact-entry p,.paper p,.intro-copy,.item-card p{line-height:1.9}
 @media(max-width:340px){
   .ad-placement{padding-inline:7px}
 }
+
+/* New school emblem: responsive, fixed-size and layout-stable in header/footer. */
+.brand .brand-emblem--image{
+ display:grid;place-items:center;flex:0 0 52px;
+ width:52px;height:52px;aspect-ratio:1/1;
+ box-sizing:border-box;border:0;background:transparent;
+ border-radius:12px;overflow:hidden;line-height:1;
+}
+.brand .brand-emblem--image img{
+ display:block;width:100%;height:100%;max-width:100%;
+ object-fit:contain;
+}
+.footer .brand .brand-emblem--image{background:transparent}
+@media(max-width:760px){
+ .masthead .brand .brand-emblem--image{width:42px;height:42px;flex-basis:42px}
+}
+@media(max-width:420px){
+ .masthead .brand .brand-emblem--image{width:36px;height:36px;flex-basis:36px}
+}
