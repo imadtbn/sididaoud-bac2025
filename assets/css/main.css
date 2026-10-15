@@ -19,21 +19,38 @@
 
 
 
-/* Global Arial font (without third-party font requests) */
-:root{--font-display:Arial,Helvetica,sans-serif;--font-body:Arial,Helvetica,sans-serif}
-html,body,button,input,select,textarea{font-family:Arial,Helvetica,sans-serif}
-body{line-height:1.8}
-h1,h2,h3,h4,h5,h6,.brand strong,.link-card strong,.item-card h3,.footer h2,
-.hero h1,.subhero h1,.cta h2,.section-heading h2,.paper h2,.paper h3{
-  font-family:Arial,Helvetica,sans-serif;font-weight:700;line-height:1.55
+
+/* Arabic-first typographic system: display (Cairo), body (Tajawal). */
+:root{
+  --font-display:"Cairo","Noto Kufi Arabic",Tahoma,Arial,sans-serif;
+  --font-body:"Tajawal","Noto Sans Arabic",Tahoma,Arial,sans-serif;
 }
-.brand strong{font-size:1.13rem;line-height:1.5}
-.hero h1{line-height:1.4}
-.section-heading h2{font-size:clamp(1.48rem,2.4vw,2.1rem)}
-.subhero h1{font-size:clamp(1.9rem,3.8vw,2.9rem)}
-.item-card h3{font-size:1.15rem}
-.paper h2{font-size:1.55rem}.paper h3{font-size:1.15rem}
-.cta h2,.about-strip h2{font-size:1.7rem}.footer h2{font-size:.96rem}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body,button,input,select,textarea{font-family:var(--font-body)}
+body{font-size:16px;line-height:1.85}
+h1,h2,h3,h4,h5,h6,.brand strong,.section-heading h2,.subhero h1,.hero h1,
+.cta h2,.about-strip h2,.paper h2,.paper h3,.item-card h3,.footer h2,.empty-state h3{
+ font-family:var(--font-display);font-weight:700;line-height:1.5;letter-spacing:0
+}
+p,li,.contact-entry p,.paper p,.intro-copy,.item-card p{line-height:1.9}
+.brand strong{font-size:1.05rem;line-height:1.55;font-weight:700}
+.brand small{font-size:.81rem;line-height:1.4}
+.nav-item{font-size:.88rem;line-height:1.55;font-weight:700}
+.header-shortcut,.site-action-button,.button,.inline-link{font-weight:700;line-height:1.4}
+.gov-line{font-size:.79rem;line-height:1.7}
+.hero h1{font-size:clamp(2.15rem,4.3vw,3.55rem);line-height:1.46}
+.hero p{font-size:1.04rem;line-height:1.95}
+.subhero h1{font-size:clamp(1.9rem,3.8vw,2.75rem);line-height:1.5}
+.section-heading h2{font-size:clamp(1.45rem,2.45vw,2.05rem);line-height:1.55}
+.link-card strong{font-size:.97rem;line-height:1.65;font-weight:700}
+.link-card small{font-size:.84rem;line-height:1.65}
+.item-card h3{font-size:1.17rem;line-height:1.55}
+.item-card p{font-size:.95rem}
+.paper h2{font-size:1.48rem}.paper h3{font-size:1.2rem}
+.cta h2,.about-strip h2{font-size:1.68rem}
+.footer h2{font-size:1.02rem;line-height:1.6}
+.footer p,.footer-main>div:not(:first-child)>a{font-size:.91rem;line-height:1.75}
+.footer-bottom,.eyebrow,.pill,.demo-pill{line-height:1.5}
 .site-action-buttons{display:flex;align-items:center;gap:8px}
 .site-action-button{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:43px;padding:8px 12px;border:1px solid #d6c392;border-radius:10px;background:#fffaf0;color:var(--navy);font-size:.82rem;font-weight:700;white-space:nowrap;transition:background .2s}
 .site-action-button:hover{background:#f5eccf}
@@ -46,7 +63,7 @@ h1,h2,h3,h4,h5,h6,.brand strong,.link-card strong,.item-card h3,.footer h2,
 .footer-external a span{font-size:1rem;color:var(--gold)}
 .site-dialog{width:min(480px,calc(100% - 30px));max-height:calc(100vh - 40px);padding:24px;border:1px solid var(--line);border-radius:17px;box-shadow:0 26px 70px #0004;color:var(--ink)}
 .site-dialog::backdrop{background:#09232dc9}
-.site-dialog h2{font:700 1.22rem Arial,Helvetica,sans-serif;margin:0;color:var(--navy)}
+.site-dialog h2{font-family:var(--font-display);font-size:1.22rem;font-weight:700;line-height:1.55;margin:0;color:var(--navy)}
 .site-dialog p{font-size:.9rem;margin:12px 0}
 .site-dialog-head{display:flex;justify-content:space-between;align-items:start;gap:12px}
 .site-dialog-close{border:0;border-radius:9px;background:var(--wash);font-size:1.5rem;width:38px;height:38px}
@@ -75,4 +92,32 @@ h1,h2,h3,h4,h5,h6,.brand strong,.link-card strong,.item-card h3,.footer h2,
   .brand strong{font-size:.79rem}.brand small{font-size:.62rem}
   .masthead .brand-emblem{width:35px;height:41px;flex-basis:35px}
   .footer-main{grid-template-columns:1fr}.footer-brand{grid-column:auto}
+}
+
+/* Responsive rhythm: avoid tall mobile headers or cramped navigation text. */
+@media(max-width:1080px){
+  .nav-item{font-size:.82rem}
+  .footer h2{font-size:1.03rem}
+}
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.8}
+  .gov-line{font-size:.69rem;line-height:1.5}
+  .brand strong{font-size:.91rem;line-height:1.45}
+  .brand small{font-size:.72rem}
+  .hero h1{font-size:clamp(2rem,7.6vw,2.8rem);line-height:1.5}
+  .hero p{font-size:.99rem;line-height:1.85}
+  .subhero h1{font-size:clamp(1.9rem,6vw,2.6rem)}
+  .section-heading h2{font-size:1.67rem;line-height:1.55}
+  .link-card strong{font-size:1rem}
+  .item-card h3{font-size:1.2rem}
+  .paper h2{font-size:1.38rem}
+  .cta h2,.about-strip h2{font-size:1.5rem}
+  .mobile-menu .nav-item{font-size:1.02rem;line-height:1.6}
+  .footer h2{font-size:1.05rem}
+}
+@media(max-width:420px){
+  .brand strong{font-size:.84rem}
+  .brand small{font-size:.66rem}
+  .hero h1{font-size:clamp(1.9rem,7.6vw,2.35rem)}
+  .gov-line{font-size:.64rem}
 }
