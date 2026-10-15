@@ -121,3 +121,15 @@ p,li,.contact-entry p,.paper p,.intro-copy,.item-card p{line-height:1.9}
   .hero h1{font-size:clamp(1.9rem,7.6vw,2.35rem)}
   .gov-line{font-size:.64rem}
 }
+
+/* Social share panel */
+.share-preview{display:flex;align-items:center;gap:12px;background:#f3f8f6;border:1px solid var(--line);border-radius:12px;padding:12px;margin:14px 0}
+.share-preview img{width:64px;height:64px;flex:0 0 64px;border-radius:11px}
+.share-preview div{min-width:0}
+.share-preview strong{display:block;font:700 .92rem/1.5 var(--font-body);color:var(--navy)}
+.share-preview p{font:.85rem/1.65 var(--font-body);color:var(--muted);margin:3px 0 0}
+.share-social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:15px 0}
+.share-social-link{display:flex;align-items:center;justify-content:center;min-height:42px;text-align:center;padding:8px;border:1px solid #c6d8d1;border-radius:9px;background:white;color:var(--navy);font-weight:700;font-size:.88rem}
+.share-social-link:hover{background:#e8f1ed;border-color:var(--teal)}
+.share-preview[hidden],.share-social-grid[hidden]{display:none!important}
+@media(max-width:420px){.share-social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.site-dialog{padding:17px}.share-preview img{width:54px;height:54px;flex-basis:54px}}
