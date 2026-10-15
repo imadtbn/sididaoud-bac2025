@@ -2,7 +2,7 @@
 "use strict";
 var share=document.getElementById("site-share"),install=document.getElementById("site-install");
 if(!share&&!install)return;
-var home=new URL("./",document.baseURI).href,site="ثانوية حسين محمد الصغير – سيدي داود",promptEvent=null,dialog=null;
+var home=new URL("./",document.baseURI).href,site="ثانوية حليمي محمد الصغير – سيدي داود",promptEvent=null,dialog=null;
 var canonical=document.querySelector('link[rel="canonical"]');
 var shareUrl=canonical?canonical.href:location.href.split("#")[0];
 function metaValue(name){var el=document.querySelector('meta[property="'+name+'"],meta[name="'+name+'"]');return el?el.content:""}
