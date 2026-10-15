@@ -16,3 +16,52 @@
 .single-result{grid-template-columns:1fr}
 .single-result .demo-result-card{max-width:100%}
 @media(max-width:520px){.demo-site-notice{font-size:.77rem}.demo-stats{gap:6px}.demo-stat{padding:10px 5px}.demo-stat strong{font-size:1.02rem}.demo-stat span{font-size:.67rem}}
+
+
+/* Arabic typography – calligraphic headings inspired by the supplied reference
+   and a highly readable Naskh body. Loaded with Google Fonts display=swap. */
+:root{
+  --font-display:"Aref Ruqaa","Traditional Arabic",Georgia,serif;
+  --font-body:"Noto Naskh Arabic",Tahoma,"Segoe UI",Arial,sans-serif;
+}
+body{font-family:var(--font-body);line-height:1.9}
+h1,h2,h3,
+.brand strong,.section-heading h2,.subhero h1,.hero h1,
+.cta h2,.about-strip h2,.paper h2,.paper h3,
+.item-card h3,.footer h2,.empty-state h3{
+  font-family:var(--font-display);
+  font-weight:700;
+  letter-spacing:0;
+  line-height:1.6;
+}
+.nav-item,.hero-chip,.eyebrow,.button,.inline-link,.link-card small,
+.link-card strong,.footer-bottom,.demo-site-notice,
+input,select,textarea,button{
+  font-family:var(--font-body);
+}
+.brand strong{font-size:1.4rem;line-height:1.5}
+.hero h1{line-height:1.58}
+.section-heading h2{font-size:clamp(1.9rem,2.9vw,2.5rem)}
+.subhero h1{font-size:clamp(2.2rem,4vw,3.35rem)}
+.item-card h3{font-size:1.52rem;line-height:1.55}
+.paper h2{font-size:1.9rem}
+.paper h3{font-size:1.5rem}
+.cta h2,.about-strip h2{font-size:2rem}
+.footer h2{font-size:1.4rem}
+.nav-item{line-height:1.45}
+.link-card strong{line-height:1.65}
+@media(max-width:760px){
+  .brand strong{font-size:1.12rem;line-height:1.4}
+  .hero h1{line-height:1.5}
+  .section-heading h2{font-size:2rem}
+  .subhero h1{font-size:2.4rem}
+  .paper h2{font-size:1.75rem}
+  .cta h2,.about-strip h2{font-size:1.85rem}
+  .mobile-menu .nav-item{line-height:1.65}
+}
+@media(max-width:420px){
+  .brand strong{font-size:1.02rem}
+  .brand small{font-size:.66rem}
+  .hero h1{font-size:clamp(2.2rem,8vw,2.7rem)}
+  .subhero h1{font-size:2.1rem}
+}
