@@ -1,5 +1,5 @@
 /* School portal: public static pages only, network-first updates. */
-const CACHE="sididaoud-pwa-v7-ad-layout-20261015";
+const CACHE="sididaoud-pwa-v8-home-intro-20261015";
 const ROOT=new URL("./",self.location.href);
 const SHELL=[
 "index.html","404.html","offline.html","about.html","activities.html","announcements.html",
