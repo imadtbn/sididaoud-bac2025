@@ -1,11 +1,11 @@
 /* School portal: public static pages only, network-first updates. */
-const CACHE="sididaoud-pwa-v3-sharing-20261015";
+const CACHE="sididaoud-pwa-v4-ads-20261015";
 const ROOT=new URL("./",self.location.href);
 const SHELL=[
 "index.html","404.html","offline.html","about.html","activities.html","announcements.html",
 "results.html","results-2025.html","students.html","documents.html","contact.html","privacy.html",
 "samples/activity-proposal.html","samples/weekly-study-plan.html",
-"assets/css/main.css","assets/js/main.js","assets/js/site-actions.js",
+"assets/css/main.css","assets/js/main.js","assets/js/site-actions.js","assets/js/ads.js",
 "assets/icons/favicon.svg","assets/icons/icon-192.png","assets/icons/icon-512.png",
 "manifest.webmanifest","data/activities.json","data/announcements.json","data/documents.json","data/results.json"
 ];
